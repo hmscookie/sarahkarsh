@@ -11,20 +11,25 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> class="clearfix">
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+  <div class="container wrapper">
+    <ul class="topnav" id="myTopnav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">My Skills</a></li>
+    <li><a href="#work">My Work</a></li>
+    <li><a href="#contact">Contact Me</a></li>
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
+
+
+
   </div> <!-- /.container -->
+
 </header><!--/.header-->
 
