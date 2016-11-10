@@ -14,3 +14,10 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+// $(function(){
+//     $(".element").typed({
+//         strings: ["hello my name is sarah.", "Second sentence."],
+//             typeSpeed: 30,
+//     });
+// });

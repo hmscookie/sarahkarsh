@@ -3,26 +3,41 @@
   <div class="content">
     <?php if( have_posts()) while( have_posts()) : the_post(); ?>
         
-    <section class="my-home">
+    <section class="my-home" id="home">
       <div class="info">
         <h1><?php   the_field('title')?> </h1>
         <h2><?php the_field('name') ?></h2>
-        <h2><?php the_field('blurb') ?></h2>
+        <h2 class="element">why</h2>
       </div>
     </section>
   </div>
 
   <section class="about-me" id="about">
       <div class="wrapper">
-        <div class="my-pic">
-          <h2><?php the_field('about_title') ?> </h2>
-          <h3><?php the_field('web_dev') ?> </h3>
-            <p><?php the_field('about_para') ?> </p>
-        </div>
-        <div>
+        <div class="about-flex">
+          <div class="my-pic">
+            <h2><?php the_field('about_title') ?> </h2>
+            
+              <p><?php the_field('about_para') ?> </p>
+          </div>
+          <div>
            <?php $meimage = get_field('about_img') ?>
             <img src="<?php echo $meimage['url'] ?>" alt="">
+          </div>
         </div>
+        <h3>My skills</h3>
+        <div class="devicons">
+          <i class="devicon-css3-plain-wordmark"></i>
+          <i class="devicon-html5-plain-wordmark"></i>
+          <i class="devicon-sass-original"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-jquery-plain"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-github-plain-wordmark"></i>
+          <i class="devicon-gulp-plain"></i>
+          <i class="devicon-wordpress-plain"></i>
+          <i class="devicon-android-plain"></i>
+       </div>
       </div>
       
       <!-- <div class="devicons wrapper">
@@ -48,7 +63,7 @@
       <div class="wrapper workOne">
         <div class="work-text">
           <p> <?php the_sub_field('project_title') ?> </p>
-          <p><?php the_sub_field('project_description') ?> </p>
+          <p><?php the_sub_field('project_description') ?></p>
           <button><?php the_sub_field('project_button') ?> </button>
         </div>
         <div class="work-img">

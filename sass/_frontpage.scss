@@ -6,34 +6,48 @@
 }
 
 .my-home {
-	background:rgb(49,46,46);
-	display:flex;
+	// background:rgb(49,46,46);
+	background:#F7F7F7;
 	justify-content:center;
 	align-content:center;
 	align-items:center;
 	width:100%;
 	-webkit-clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0);
   	clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0);
-  	height:90vh;
+  	height:85vh;
   	margin:0 auto;
   	position:relative;
   	z-index:100;
 	.info {
-		
-		text-align:center;
+		text-align:left;
 		padding-left:10%;
 		padding-right:10%;
 		h1 {
 			color:$yellow;
-			margin-top:0;
-			font-size:9rem;
+			margin:0;
+			font-size:13rem;
+			padding-top: 114px;
+			margin-bottom: -5px;
 		}
 		h2 {
 			font-size:4rem;
-			margin:1rem;
 			color:$blue;
+			letter-spacing:0.6px;
+			margin-top: -3px;
+			margin-bottom:3rem;
 			&:first-of-type {
-				font-size:6rem;
+				font-size: 6rem;
+				color: $yellow;
+				// border-bottom: 4px solid #fbee61;
+				// margin-bottom: 24px;
+				display:inline-block;
+				&:after {
+					content: '';
+				    display: block;
+				    background: $yellow;
+				    height: 3px;
+				    margin-top:1rem;
+				}
 			}
 		}
 	}
@@ -41,7 +55,10 @@
 }
 
 .about-me {
-	background:$blue;
+	// background:$blue;
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/Seamles.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
 	position:relative;
@@ -49,30 +66,48 @@
 	margin-top:-150px;
 	.wrapper {
 		padding-top:20%;
-		display:flex;
-		h2 {
-			font-size:5rem;
-			text-transform:uppercase;
-			color:$yellow;
-			letter-spacing:2px;
-			margin-top:0;
-			margin-bottom:1rem;
-
+		padding-bottom:5%;
+		.about-flex{
+			display:flex;
+			.my-pic {
+				h2 {
+					font-size:7rem;
+					text-transform:uppercase;
+					color:$yellow;
+					letter-spacing:2px;
+					margin-top:0;
+					margin-bottom:1rem;
+				}
+				h3 {
+					font-size:3rem;
+					text-transform:uppercase;
+				}
+				p {
+					font-size:2rem;
+					padding-right:4rem;
+					color:rgb(14,14,14);
+				}
+			}
+			div {
+				flex-direction: column;
+			    justify-content: center;
+			    display: flex;
+				img {
+					width:400px;
+					background:white;
+				}
+			}
 		}
 		h3 {
-			font-size:3rem;
-			text-transform:uppercase;
-		}
-		p {
-			font-size:2rem;
-			padding-right:4rem;
-			padding-bottom:40%;
-		}
-		div {
-			img {
-				width:400px;
-				background:white;
-			}
+			color:$yellow;
+			display:inline-block;
+			&:after {
+					content: '';
+				    display: block;
+				    background: $yellow;
+				    height: 3px;
+				    margin-top:1rem;
+					}
 		}
 	}
 }
@@ -85,12 +120,17 @@
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:center;
-	align-items:center;
+	justify-content:flex-start;
 	padding-bottom:20%;
+	width:60%;
 		i {
-		font-size:6rem;
-		padding: 3rem;
+		font-size:4rem;
+		padding: 1rem;
 		padding-top:0;
+		color:white;
+		&:first-of-type {
+			padding-left:0;
+		}
 	}
 }
 
@@ -104,36 +144,53 @@
 	font-size:2rem;
 	text-align:center;
 	h2{
-		font-size:5rem;
+		font-size:7rem;
 		text-transform:uppercase;
 		color:$orange;
 		letter-spacing:2px;
 		padding-bottom:3rem;
-		padding-top:3rem;
 	}
 	div.wrapper{
 		display:flex;
 		margin-bottom:3rem;
 		background:white;
-		border:4px solid black;
+		// border:4px solid rgb(54,54,54);
+		box-shadow: 2px 2px 5px 0 rgba(130, 128, 128, 0.3);
 		.work-text {
 			width:50%;
-			display:block;
+			display:flex;
+			flex-direction:column;
 			text-align:left;
-			padding-left:3rem;
+			// padding-left:8rem;
 			p:first-of-type {
 				font-size:3.5rem;
 				font-family: 'Inconsolata', monospace;
 				text-transform:uppercase;
+				line-height:1;
+				color:$blue;
+				font-weight:700;
+				padding-top:3rem;
+				margin-bottom: 3px;
+				&:after {
+					content: '';
+				    display: block;
+				    background: $blue;
+				    height: 3px;
+				    width: 60%;
+				    margin-top:1rem;
+				}
 			}
 			p:last-of-type {
 				font-size:2rem;
+				min-height:175px;
+				line-height: 37px;
 			}
 		}
 		button {
 			height:50px;
 			width:140px;
 			color:white;
+			margin-bottom:3rem;
 			&:hover{
 				color:$orange;
 			}
@@ -149,9 +206,18 @@
 .workOne:nth-child(odd){
 	display:flex;
 	flex-direction:row-reverse;
+	padding-right:8rem;
+	padding-left:0;
+}
+
+.workOne:nth-child(even){
+	padding-right:0;
+	padding-left:8rem;
 }
 .contact-me {
-	background:$blue;
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/Seamles.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	-webkit-clip-path: polygon(51% 11%, 100% 0, 100% 100%, 0 100%, 0 0);
 	clip-path: polygon(51% 11%, 100% 0, 100% 100%, 0 100%, 0 0);
 	margin-top:-150px;
@@ -166,8 +232,11 @@
 }
 
 .connect {
-	text-align:right;
+	text-align:left;
 	width:30%;
+	p {
+		color:white;
+	}
 	h3 {
 		color:$yellow;
 	}
@@ -175,8 +244,8 @@
 
 .icon-flex {
 		font-size:2rem;
-		display:flex;
-    	justify-content: flex-end;
+		display:flex;  
+    	justify-content: flex-start;
 		// font-size:6rem;
 		i {
 			padding-left: 1rem;
@@ -190,13 +259,60 @@
 	text-align:left;
 	input {
 		padding:1rem;
+		background-color:#F7F7F7;
+		width:90%;
 	}
+	textarea {
+		background-color:#F7F7F7;
+		width:90%;
+	}
+	.wpcf7-submit {
+			width:30%;
+			color:white;
+			background: #df674f;
+	    	transition: all .2s ease;
+	    	border: 3px solid #df674f;
+	    	box-shadow: 5px 5px 5px 0 rgba(223,103,79,.3);
+	    	text-transform:uppercase;
+	    	&:hover {
+	    		background:white;
+	    		border: 3px solid black;
+	    		color:$orange;
+	    		font-weight:700;
+	    	}
+			}
 }
 
 .address {
-	text-align:right;
+	text-align:left;
 	width:30%;
+	color:white;
+	p{
+		color:white;
+	}
 	h3 {
 		color:$yellow;
 	}
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
