@@ -1,0 +1,111 @@
+@media (max-width: 1200px) {
+	.about-me {-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  		}
+  	.devicons {
+  		width:100%;
+  	}	
+  	.my-work{
+		.work-img {
+			width:50%;
+		}
+	}
+}
+
+@media (max-width: 894px) {
+	.about-me {
+		.wrapper{ 
+			.about-flex{
+				display:block;
+				.my-pic {
+					width:100%;
+					p{
+						padding-right:0;
+					}
+				}
+				.sarah-me {
+					display:block;
+					text-align:center;
+				}
+
+			}
+		}
+	}
+	.my-work {
+		.wrapper.workOne {
+			display:block;
+			.work-text {
+				width:90%;
+				p:last-of-type {
+					min-height:120px;
+				}
+				button {
+					margin-bottom:0;
+				}
+			}
+			.work-img {
+				width:90%;
+				margin-left:-30px;
+				text-align:left;
+			}
+		}
+		.workOne:nth-child(odd){
+				padding-left:8rem;
+			}
+
+	}
+
+}
+
+@media (max-width: 750px) {
+	.about-me {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+	}
+	.my-work{
+		.work-img {
+			width:50%;
+
+		}
+	}
+}
+
+
+@media (max-width: 624px) {
+	.my-home {
+		.info {
+			h2:first-of-type{
+				font-size: 5rem;
+				margin-bottom:2rem;
+				margin-top:1.7rem;
+				width:140%;
+			}
+			h2 {
+				font-size:3.5rem;
+				width:80%;
+				display:block;
+				margin-bottom:1.3rem;
+			}
+		}
+	}
+	.typed-cursor {
+		display:none;
+	}
+	.my-home {
+		height:100vh;
+	}
+}
+
+@media (max-width: 600px) {
+	.about-me {
+  		.wrapper{ 
+			.about-flex{
+				.my-pic {
+					h2 {
+						font-size:5rem;
+					}
+				}
+			}
+		}
+	}
+}

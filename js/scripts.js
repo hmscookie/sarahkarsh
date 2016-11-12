@@ -15,9 +15,24 @@ function myFunction() {
     }
 }
 
-// $(function(){
-//     $(".element").typed({
-//         strings: ["hello my name is sarah.", "Second sentence."],
-//             typeSpeed: 30,
-//     });
-// });
+
+//typed.js
+$(function(){
+    $(".element").typed({
+        strings: [ "Accessible coder.", "Teacher.", "Gardener.", "Cat lover.", "Video games👾."],
+            typeSpeed: 30,
+            startDelay: 0,
+            backSpeed: 20,
+            backDelay:1900,
+            loop:true
+    });
+});
+
+// smooth scroll //
+  $(document).on('click', 'a', function(e){
+      e.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 550);
+  });

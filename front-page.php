@@ -7,7 +7,9 @@
       <div class="info">
         <h1><?php   the_field('title')?> </h1>
         <h2><?php the_field('name') ?></h2>
-        <h2 class="element">why</h2>
+        <h2>FRONT End developer | </h2>
+        <h2 class="element"> </h2>
+        
       </div>
     </section>
   </div>
@@ -20,7 +22,7 @@
             
               <p><?php the_field('about_para') ?> </p>
           </div>
-          <div>
+          <div class="sarah-me">
            <?php $meimage = get_field('about_img') ?>
             <img src="<?php echo $meimage['url'] ?>" alt="">
           </div>
@@ -39,22 +41,6 @@
           <i class="devicon-android-plain"></i>
        </div>
       </div>
-      
-      <!-- <div class="devicons wrapper">
-        <i class="devicon-css3-plain-wordmark"></i>
-        <i class="devicon-html5-plain-wordmark"></i>
-        <i class="devicon-sass-original"></i>
-        <i class="devicon-javascript-plain"></i>
-        <i class="devicon-jquery-plain"></i>
-        <i class="devicon-trello-plain-wordmark"></i>
-        <i class="devicon-git-plain"></i>
-        <i class="devicon-github-plain-wordmark"></i>
-        <i class="devicon-gulp-plain"></i>
-        <i class="devicon-wordpress-plain"></i>
-        <i class="devicon-php-plain"></i>
-        <i class="devicon-android-plain"></i>
-      </div> -->
-
   </section>
     
   <section class="my-work" id="work">
@@ -88,9 +74,9 @@
           <h3><?php the_field('social_networks') ?></h3>
 
           <div class="icon-flex">
-             <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-             <i class="fa fa-github-square fa-2x" aria-hidden="true"></i>
-             <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+             <a href="https://twitter.com/SarahKarsh"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+             <a href="https://github.com/hmscookie"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+            <a href="https://ca.linkedin.com/in/sarah-karsh-5915b770"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="connect">

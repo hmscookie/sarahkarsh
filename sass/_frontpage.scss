@@ -1,5 +1,5 @@
 ::selection {
-  background: $yellow; /* WebKit/Blink Browsers */
+  background: rgba($yellow,.9); /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
   background: #ffb7b7; /* Gecko Browsers */
@@ -7,14 +7,17 @@
 
 .my-home {
 	// background:rgb(49,46,46);
-	background:#F7F7F7;
-	justify-content:center;
-	align-content:center;
-	align-items:center;
+	background:url(./images/geometry2.png);
+	background-repeat:repeat;
+	background-size:390px;
 	width:100%;
+	//this is for chrome and other browsers so i can reduce the margin//
+	@supports not ((-webkit-clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0)) or (clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0)) ){
+    height:100vh;
+		}
 	-webkit-clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0);
   	clip-path: polygon(100% 0, 100% 83%, 61% 100%, 0 84%, 0 0);
-  	height:85vh;
+  	height:90vh;
   	margin:0 auto;
   	position:relative;
   	z-index:100;
@@ -23,7 +26,7 @@
 		padding-left:10%;
 		padding-right:10%;
 		h1 {
-			color:$yellow;
+			color:$blue;
 			margin:0;
 			font-size:13rem;
 			padding-top: 114px;
@@ -35,18 +38,21 @@
 			letter-spacing:0.6px;
 			margin-top: -3px;
 			margin-bottom:3rem;
+			display:inline;
 			&:first-of-type {
 				font-size: 6rem;
-				color: $yellow;
+				color: $orange;
 				// border-bottom: 4px solid #fbee61;
 				// margin-bottom: 24px;
 				display:inline-block;
+				width:100%;
 				&:after {
 					content: '';
 				    display: block;
-				    background: $yellow;
+				    background: $orange;
 				    height: 3px;
 				    margin-top:1rem;
+				    width:40%;
 				}
 			}
 		}
@@ -54,9 +60,15 @@
 
 }
 
+.typed-cursor {
+	font-size:4rem;
+}
 .about-me {
 	// background:$blue;
-	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/Seamles.jpg);
+	@supports not ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) or (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) ){
+    margin-top:0;
+    }
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
@@ -65,8 +77,13 @@
 	z-index:50;
 	margin-top:-150px;
 	.wrapper {
-		padding-top:20%;
+		padding-top:200px;
 		padding-bottom:5%;
+		@supports not ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) or (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) ){
+		.wrapper {
+    	padding-top:20px;
+		}
+	}
 		.about-flex{
 			display:flex;
 			.my-pic {
@@ -79,13 +96,23 @@
 					margin-bottom:1rem;
 				}
 				h3 {
-					font-size:3rem;
+					font-size:2.5rem;
 					text-transform:uppercase;
+					padding-right:8rem;
+					display:inline-block;
 				}
 				p {
-					font-size:2rem;
-					padding-right:4rem;
-					color:rgb(14,14,14);
+					font-size:1.9rem;
+					padding-right:8rem;
+					color:white;
+					margin-top:0;
+				}
+				strong{
+					color:yellow;
+				}
+				a {
+					color:white;
+					font-weight:700;
 				}
 			}
 			div {
@@ -135,11 +162,13 @@
 }
 
 .my-work{
-	background:#F7F7F7;
+	background:url(./images/geometry2.png);
+	background-repeat:repeat;
+	background-size:390px;
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	margin-top:-290px;
 	width:100%;
-	padding-top:20%;
+	padding-top:300px;
 	padding-bottom:20%;
 	font-size:2rem;
 	text-align:center;
@@ -149,6 +178,7 @@
 		color:$orange;
 		letter-spacing:2px;
 		padding-bottom:3rem;
+		margin-top:1rem;
 	}
 	div.wrapper{
 		display:flex;
@@ -215,9 +245,10 @@
 	padding-left:8rem;
 }
 .contact-me {
-	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/Seamles.jpg);
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	// background:$blue;
 	-webkit-clip-path: polygon(51% 11%, 100% 0, 100% 100%, 0 100%, 0 0);
 	clip-path: polygon(51% 11%, 100% 0, 100% 100%, 0 100%, 0 0);
 	margin-top:-150px;
@@ -236,9 +267,13 @@
 	width:30%;
 	p {
 		color:white;
+		margin:1rem 0;
 	}
 	h3 {
 		color:$yellow;
+	}
+	i {
+		padding-right:1.5rem;
 	}
 }
 
@@ -250,6 +285,10 @@
 		i {
 			padding-left: 1rem;
 			padding-right:1rem;
+			transition:all 0.4s ease;
+			&:hover{
+				color:$orange;
+			}
 		}
 }
 
@@ -257,14 +296,18 @@
 	font-size:2rem;
 	width:60%;
 	text-align:left;
+	padding-bottom:8rem;
 	input {
 		padding:1rem;
-		background-color:#F7F7F7;
+		background-color:white;
 		width:90%;
+		border:none;
 	}
 	textarea {
-		background-color:#F7F7F7;
+		background-color:white;
 		width:90%;
+		border:none;
+		padding:1rem;
 	}
 	.wpcf7-submit {
 			width:30%;
@@ -279,10 +322,14 @@
 	    		border: 3px solid black;
 	    		color:$orange;
 	    		font-weight:700;
-	    	}
+	    		}
 			}
 }
 
+label {
+	color:white;
+	margin-bottom:1rem;
+}
 .address {
 	text-align:left;
 	width:30%;
@@ -294,13 +341,18 @@
 		color:$yellow;
 	}
 }
-
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
+
+.media-button {
+	display:none;
+}
+
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
