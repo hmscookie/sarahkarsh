@@ -1,0 +1,79 @@
+/*!
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+http://oliviachoy.com/
+* Author URI: http://hackeryou.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'frontpage';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.full {
+	width: 100%;
+}
+
+.wrapper {
+  margin:0 auto;
+  max-width:1200px;
+  width:80%;
+}
+
+html {
+  font-size:10px;
+}  
+
+h1, h2, h3, h4, h5, h6 a {
+    font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+  font-size:6rem;
+}
+
+h2 {
+    font-size:5rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+h3 {
+    font-size:3rem;
+    text-transform:uppercase;
+}
+
+body {
+  background:white;
+}
+
+p {
+  font-size:2rem;
+  color: rgb(77,77,77);
+}
+
+@import 'mediaqueries';

@@ -11,10 +11,10 @@ $teal:rgb(18,208,183);
 
 
 a {
-	color: #BA209B;
+	color: white;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color:$orange;
 	}
 }
 

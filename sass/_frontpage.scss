@@ -78,11 +78,12 @@
 	margin-top:-150px;
 	.wrapper {
 		padding-top:200px;
-		padding-bottom:5%;
+		padding-bottom:50px;
 		@supports not ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) or (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) ){
 		.wrapper {
     	padding-top:20px;
 		}
+
 	}
 		.about-flex{
 			display:flex;
@@ -134,12 +135,27 @@
 				    background: $yellow;
 				    height: 3px;
 				    margin-top:1rem;
+				    width:50%;
 					}
 		}
 	}
 }
 .my-pic {
 	width:60%; 
+}
+.about-me {
+	.wrapper {
+		h3.skills-line {
+			&:after {
+				content: '';
+				display: block;
+				background: $yellow;
+				height: 3px;
+				margin-top:1rem;
+				width:100%;
+			}
+		}
+	}
 }
 
 
@@ -153,6 +169,7 @@
 		i {
 		font-size:4rem;
 		padding: 1rem;
+		padding-bottom:3rem;
 		padding-top:0;
 		color:white;
 		&:first-of-type {
@@ -161,15 +178,16 @@
 	}
 }
 
+
 .my-work{
 	background:url(./images/geometry2.png);
 	background-repeat:repeat;
 	background-size:390px;
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	// box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	margin-top:-290px;
 	width:100%;
 	padding-top:300px;
-	padding-bottom:20%;
+	padding-bottom:150px;
 	font-size:2rem;
 	text-align:center;
 	h2{
@@ -219,10 +237,13 @@
 		button {
 			height:50px;
 			width:140px;
-			color:white;
 			margin-bottom:3rem;
+			color:white;
 			&:hover{
 				color:$orange;
+			}
+			a {
+				padding:1rem;
 			}
 
 		}
@@ -256,6 +277,7 @@
 	padding-top:15%;
 	.contact-flex {
 		display:flex;
+		flex-wrap:wrap;
 	}
 	h2 {
 		color:$yellow;
@@ -294,7 +316,7 @@
 
 .contact-form {
 	font-size:2rem;
-	width:60%;
+	width:45%;
 	text-align:left;
 	padding-bottom:8rem;
 	input {
@@ -302,6 +324,7 @@
 		background-color:white;
 		width:90%;
 		border:none;
+		min-width:80px;
 	}
 	textarea {
 		background-color:white;
@@ -310,7 +333,7 @@
 		padding:1rem;
 	}
 	.wpcf7-submit {
-			width:30%;
+			width:25%;
 			color:white;
 			background: #df674f;
 	    	transition: all .2s ease;
@@ -332,7 +355,7 @@ label {
 }
 .address {
 	text-align:left;
-	width:30%;
+	width:25%;
 	color:white;
 	p{
 		color:white;
@@ -352,19 +375,25 @@ label {
 	display:none;
 }
 
+div.wpcf7-response-output {
+	border:none;
+	background:white;
+}
 
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+span.wpcf7-not-valid-tip {
+		color:black;
+	}
+
+
+.preloader {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+   background-image: url('./images/pie.gif');
+   background-repeat: no-repeat; 
+   background-color: #FFF;
+   background-position: center;
 }

@@ -19,7 +19,13 @@ function theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// add option to upload logo in theme customizer
-	add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo', array(
+	'height'      => 100,
+	'width'       => 400,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+) );
 
 
 	/* This theme uses wp_nav_menu() in one location.

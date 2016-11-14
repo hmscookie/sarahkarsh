@@ -28,11 +28,19 @@ $(function(){
     });
 });
 
-// smooth scroll //
-  $(document).on('click', 'a', function(e){
-      e.preventDefault();
 
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 550);
-  });
+$('a').on('click', function(e) {
+        if (this.hash !== "") {
+            e.preventDefault();
+
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top}, 800, function() {
+                    window.location.hash = hash;
+                });
+        }
+    });
+
+$(window).load(function() {
+   $('.preloader').fadeOut('slow');
+});

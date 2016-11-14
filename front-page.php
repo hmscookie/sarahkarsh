@@ -7,7 +7,7 @@
       <div class="info">
         <h1><?php   the_field('title')?> </h1>
         <h2><?php the_field('name') ?></h2>
-        <h2>FRONT End developer | </h2>
+        <h2>FRONT End developer|  </h2>
         <h2 class="element"> </h2>
         
       </div>
@@ -27,7 +27,7 @@
             <img src="<?php echo $meimage['url'] ?>" alt="">
           </div>
         </div>
-        <h3>My skills</h3>
+        <h3 class="skills-line">My skills</h3>
         <div class="devicons">
           <i class="devicon-css3-plain-wordmark"></i>
           <i class="devicon-html5-plain-wordmark"></i>
@@ -74,15 +74,14 @@
           <h3><?php the_field('social_networks') ?></h3>
 
           <div class="icon-flex">
-             <a href="https://twitter.com/SarahKarsh"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-             <a href="https://github.com/hmscookie"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+             <a href="https://twitter.com/SarahKarsh" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true" target="_blank"></i></a>
+             <a href="https://github.com/hmscookie" target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
             <a href="https://ca.linkedin.com/in/sarah-karsh-5915b770"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="connect">
           <h3><?php the_field('connect_h3') ?></h3>
-          <p> <i class="fa fa-phone-square " aria-hidden="true"></i> 416-802-4634</p>
-          <p><i class="fa fa-envelope-o " aria-hidden="true"></i> savkarsh [at] gmail.com</p>
+          <p><i class="fa fa-envelope-o " aria-hidden="true"></i> savkarsh [at] gmail [dot] com</p>
           <p><i class="fa fa-mouse-pointer " aria-hidden="true"></i> sarahkarsh.com</p>
         </div>
       </div>

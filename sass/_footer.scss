@@ -4,4 +4,16 @@ footer {
 	background:url(./images/geometry2.png);
 	background-repeat:repeat;
 	background-size:390px;
+	p {
+		margin:0;
+		padding:2rem 0 0;
+		color:black;
+		&:last-of-type {
+			padding-top: 0;
+			color:rgb(41,41,41);
+			font-size:1.4rem;
+			padding-bottom:2rem;
+		}
+
+	}
 }
