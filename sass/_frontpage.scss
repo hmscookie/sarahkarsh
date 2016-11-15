@@ -68,7 +68,7 @@
 	@supports not ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) or (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%)) ){
     margin-top:0;
     }
-	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless.jpg);
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless-go.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
@@ -234,18 +234,31 @@
 				line-height: 37px;
 			}
 		}
-		button {
-			height:50px;
+		.live-button {
 			width:140px;
-			margin-bottom:3rem;
+			padding:1rem;
 			color:white;
-			&:hover{
+			margin-bottom:3rem;
+			text-transform:uppercase;
+			transition: all .2s ease;
+			border:3px solid $orange;
+			box-shadow: 5px 5px 5px 0px rgba($orange,0.3);
+			text-align:center;
+			background:$orange;
+			display:block;
+			text-align:center;
+			&:hover {
+				background:white;
+				border:3px solid black;
 				color:$orange;
+				font-weight:bold;
 			}
-			a {
-				padding:1rem;
-			}
-
+			// margin-bottom:3rem;
+			// color:white;
+			// background:$orange;
+			// &:hover{
+			// 	color:$orange;
+			// }
 		}
 		img {
 			width:70%;
@@ -266,7 +279,7 @@
 	padding-left:8rem;
 }
 .contact-me {
-	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless.jpg);
+	background: linear-gradient(rgba(0, 185, 235, 0.05),#0ba7cb),url(images/seamless-go.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	// background:$blue;
@@ -287,6 +300,7 @@
 .connect {
 	text-align:left;
 	width:30%;
+	padding-left:1.5rem;
 	p {
 		color:white;
 		margin:1rem 0;
@@ -396,4 +410,7 @@ span.wpcf7-not-valid-tip {
    background-repeat: no-repeat; 
    background-color: #FFF;
    background-position: center;
+}
+.heather {
+	color:$blue;
 }

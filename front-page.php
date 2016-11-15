@@ -24,7 +24,7 @@
           </div>
           <div class="sarah-me">
            <?php $meimage = get_field('about_img') ?>
-            <img src="<?php echo $meimage['url'] ?>" alt="">
+            <img src="<?php echo $meimage['url'] ?>" alt="A close up image of my face and button-up shirt from muji. I photoshopped out the background I have short hair and am wearing pineapple earrings.">
           </div>
         </div>
         <h3 class="skills-line">My skills</h3>
@@ -50,11 +50,12 @@
         <div class="work-text">
           <p> <?php the_sub_field('project_title') ?> </p>
           <p><?php the_sub_field('project_description') ?></p>
-          <button><?php the_sub_field('project_button') ?> </button>
+          <!-- this is in an a tag because hover. -->
+          <?php the_sub_field('project_button')?>
         </div>
         <div class="work-img">
           <?php $workimage = get_sub_field('project_image') ?>
-          <img src="<?php echo $workimage['url'] ?>" alt="">
+          <img src="<?php echo $workimage['url'] ?>" alt="this is a photoshopped screenshot of my site put into a monitor.">
         </div>
       </div>
         <?php endwhile ?>
@@ -81,7 +82,7 @@
         </div>
         <div class="connect">
           <h3><?php the_field('connect_h3') ?></h3>
-          <p><i class="fa fa-envelope-o " aria-hidden="true"></i> savkarsh [at] gmail [dot] com</p>
+          <p><i class="fa fa-envelope-o " aria-hidden="true"></i> hello [at] sarahkarsh [dot] com</p>
           <p><i class="fa fa-mouse-pointer " aria-hidden="true"></i> sarahkarsh.com</p>
         </div>
       </div>

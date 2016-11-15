@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <p>&copy; Sarah Karsh <?php echo date('Y'); ?></p>
-    <p>headshot by Pam Lau</p>
+    <p>Headshot by <a href="http://pamlau.com/" target="_blank">Pam Lau</a></p>
   </div>
 </footer>
 
